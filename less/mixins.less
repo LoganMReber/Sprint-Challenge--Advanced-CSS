@@ -1,1 +1,31 @@
 // Mixins Here
+.flexBox(@direction: row,@justify: flex-start,@align: flex-start) {
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.btnStyles(@font-color,@bg-color) {
+    color: @font-color;
+    background-color: @bg-color;
+    width: 30%;
+    padding: 7px 0;
+    text-align: center;
+    font-size: 1.8rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    &:hover {
+        color: @bg-color;
+        background-color: @font-color;
+    }
+    @media @phone {
+        width: 100%;
+        padding: 20px 0;
+    }
+}
+
+.mobileAdjust() {
+    width: 90%;
+    margin: 0 auto;
+}

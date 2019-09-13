@@ -11,19 +11,33 @@
     p {
       padding:0 15px;
     }
-  
+    @media @phone {
+      h2,p {
+        width: 95%;
+        margin: 0 auto;
+      }
+    }
   }
 
   .space-images {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+    }
+    @media @phone {
+      .mobileAdjust();
+      flex-direction: column;
+      .blast {
+        width: 100%;
+        margin: 20px 0;
+      }
+      .sky, .launch {
+        display: none;
+      }
     }
   }
 
@@ -36,6 +50,9 @@
 
     p {
       margin-top: 13px;
+    }
+    @media @phone {
+      .mobileAdjust();
     }
   }
 
@@ -58,6 +75,7 @@
       }
 
       .btn {
+        .btnStyles(white,@btn-bg-color);
       }
     }
 
@@ -69,6 +87,18 @@
         width: 100%;
         height: auto;
         border-radius: 10px;
+      }
+    }
+    @media @phone {
+      margin-top: 30px;
+      flex-direction: column-reverse;
+      padding: 30px 0;
+      .walk-img {
+        .mobileAdjust();
+        padding-bottom: 10px;
+      }
+      .walk-text {
+        .mobileAdjust();
       }
     }
   }

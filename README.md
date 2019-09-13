@@ -34,13 +34,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the difference between an adaptive website and a fully responsive website?
 
+Adaptive websites will have some breakpoints for different devices while a full responsive website will work as intended on nearly all devices and widths. 
+
 2. Describe what it means to be mobile first vs desktop first.
+
+Mobile or desktop first refers to the format in which you create the initial design. If you build the site for mobile and adapt to desktop you are building mobile first and vice versa.
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
 
+Setting the html font-size to 62.5% makes 1rem unit equal to 10px so translating to other font sizes in rem becomes easier
+
 4. How would you describe preprocessing to someone new to CSS?
 
+Preprocessing allows you to make many shortcuts in your CSS. The shortcuts are then interpreted by the preprocessor into regular CSS code.
+
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+Mixins are a very useful part of preprocessing. The only issue with preprocessing is the need to compile code constantly in order to do interative testing.
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
@@ -69,7 +79,7 @@ Follow these steps for completing your project.
 * [x] Verify that you have LESS installed correctly by running `lessc -v` in your terminal, if you don't get a version message back, reach out to your project manager for help.
 * [x] Open your terminal and navigate to your preprocessing project by using the `cd` command
 * [x] Once in your project's root folder, run the following command `less-watch-compiler less css index.less`
-* [ ] Verify your compiler is working correctly by changing the `background-color` on the `html` selector to `red` in your `index.less` file.
+* [x] Verify your compiler is working correctly by changing the `background-color` on the `html` selector to `red` in your `index.less` file.
 * [x] Once you see the red screen, you can delete that style and you're ready to start on the next task
 
 ## Minimum Viable Product
@@ -128,7 +138,7 @@ After finishing your required elements, you can push your work further. These go
 
 * [ ] Build a page of your choosing from the navigation items. Come up with content and images that fit the theme.
 
-* [ ] Introduce CSS animations to your site.
+* [x] Introduce CSS animations to your site.
 
 * [ ] Create a fixed navigation and add some opacity to the background
 

@@ -12,6 +12,14 @@ nav {
         width: 40%;
         font-size: 1.4rem;
         padding-bottom: 12px;
+        a {
+            text-decoration: none;
+            color: @nav-font;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        
         .flexBox(row,space-between,center);
         @media @phone {
             width: 70%;

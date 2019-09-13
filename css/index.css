@@ -183,6 +183,13 @@ nav .links {
   justify-content: space-between;
   align-items: center;
 }
+nav .links a {
+  text-decoration: none;
+  color: #454A59;
+}
+nav .links a:hover {
+  text-decoration: underline;
+}
 @media (max-width: 500px) {
   nav .links {
     width: 70%;
@@ -224,8 +231,8 @@ footer {
 @media (max-width: 500px) {
   .home .space-images {
     width: 90%;
-    flex-direction: column;
     margin: 0 auto;
+    flex-direction: column;
   }
   .home .space-images .blast {
     width: 100%;
@@ -278,8 +285,36 @@ footer {
   border-radius: 5px;
 }
 .home .walk .walk-text .btn:hover {
-  color: #22283A;
-  background-color: white;
+  color: #808080;
+  animation-name: glow;
+  animation-duration: 0.8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-name: glow;
+  -webkit-animation-duration: 0.8s;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+}
+@keyframes glow {
+  from {
+    background-color: #22283A;
+    color: white;
+  }
+  to {
+    background-color: white;
+    color: #22283A;
+  }
+}
+@-webkit-keyframes glow {
+  from {
+    background-color: #22283A;
+    color: white;
+  }
+  to {
+    background-color: white;
+    color: #22283A;
+  }
 }
 @media (max-width: 500px) {
   .home .walk .walk-text .btn {

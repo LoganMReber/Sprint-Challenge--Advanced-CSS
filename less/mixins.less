@@ -1,1 +1,62 @@
 // Mixins Here
+.flexBox(@direction: row,@justify: flex-start,@align: flex-start) {
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+    align-items: @align;
+}
+.glow(@bg-color,@font-color) {
+    color: darken(@font-color,50%);
+    animation-name: glow;
+    animation-duration: 0.8s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    @keyframes glow {
+        from {
+            background-color: @bg-color;
+            color: @font-color;
+        }
+        to {
+            background-color: @font-color;
+            color: @bg-color;
+        }
+    }
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: glow; 
+    -webkit-animation-duration: 0.8s;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-iteration-count: infinite;
+    @-webkit-keyframes glow {
+        from {
+            background-color: @bg-color;
+            color: @font-color;
+        }
+        to {
+            background-color: @font-color;
+            color: @bg-color;
+        }
+    }
+}
+.btnStyles(@font-color,@bg-color) {
+    color: @font-color;
+    background-color: @bg-color;
+    width: 30%;
+    padding: 7px 0;
+    text-align: center;
+    font-size: 1.8rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    &:hover {
+        .glow(@bg-color,@font-color);
+    }
+    @media @phone {
+        width: 100%;
+        padding: 20px 0;
+    }
+}
+
+.mobileAdjust() {
+    width: 90%;
+    margin: 0 auto;
+}
+
